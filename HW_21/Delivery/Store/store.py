@@ -1,4 +1,4 @@
-from Delivery.abstractClass.abstractnethod import Abstract
+from HW_21.Delivery.abstractClass.abstractnethod import Abstract
 
 
 class Store(Abstract):

@@ -1,19 +1,31 @@
-from Delivery.Shop.shop import Shop
-from Delivery.Store.store import Store
-from Delivery.abstractClass.abstractnethod import Abstract
+class Request:
+    def __init__(self, start):
+        self.start = self._start()
+        self.to = self._to()
+        self.product = self._product()
+        self.amount = self._amount()
 
+    @staticmethod
+    def _start():
+        start = input('Откуда отправляем: ')
+        return start
 
-class Request(Abstract):
-    def __init__(self, from_, to, amount, product):
-        self.from_ = from_
-        self.to = to
-        self.amount = amount
-        self.product = product
+    @staticmethod
+    def _to():
+        to = input('Куда отправляем: ')
+        return to
 
-    def get_request(self):
-        from_input = input('Откуда отправляем: ')
-        to_input = input('Куда отправляем: ')
-        product_import = input('Что отправляем: ')
-        count_input = int(input('Количество: '))
+    @staticmethod
+    def _product():
+        product = input('Что отправляем: ')
+        return product
 
-# request = Request()
+    @staticmethod
+    def _amount():
+        amount = int(input('Количество: '))
+        return amount
+
+req_start = Request._start()
+# req_to = request.to
+# req_product = request.product
+# req_amount = request.amount
